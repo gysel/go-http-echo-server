@@ -33,3 +33,11 @@ If you don't want to use the default port (`8080`), make sure you change that in
 ```bash
 docker run -d -p 8080:8080 go-http-echo-server
 ```
+
+## Kubernetes
+
+Run the bash script to push the image into a registry (`localhost:32000` by default) and deploy it to Kubernetes.
+
+```bash
+./deploy.sh
+```
