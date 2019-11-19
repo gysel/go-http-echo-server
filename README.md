@@ -41,3 +41,14 @@ Run the bash script to push the image into a registry (`localhost:32000` by defa
 ```bash
 ./deploy.sh
 ```
+
+Or use the existing Docker image:
+
+```bash
+IMAGE=docker.pkg.github.com/gysel/go-http-echo-server/http-echo-server
+kubectl create deployment echo-server --image=$IMAGE
+kubectl expose deployment echo-server --port=80 --target-port=8080
+```
+
+Please note that GitHub requires you to log in even when the image is public.
+(See https://github.community/t5/GitHub-Actions/docker-pull-from-public-GitHub-Package-Registry-fail-with-quot/td-p/32782)
