@@ -10,7 +10,7 @@ go run echoserver.go
 
 Then point your browser to [http://localhost:8080](http://localhost:8080).
 
-The port will be set to `8080` by default. If you want to run the server on another port, pass it as a parameter:
+The port will be set to `8080` by default. If you want to run the server on another port, pass it using the `PORT` environment variable or as a parameter:
 
 ```go
 go run echoserver.go 8090

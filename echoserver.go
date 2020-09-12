@@ -8,9 +8,12 @@ import (
 )
 
 func getServerPort() string {
-	port := "8080"
+	port := os.Getenv("PORT")
 	if len(os.Args) > 1 {
 		port = strings.TrimSpace(os.Args[1])
+	}
+	if port == "" {
+		port = "8080"
 	}
 
 	return port
